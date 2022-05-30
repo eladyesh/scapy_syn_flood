@@ -108,7 +108,6 @@ class Server:
 
             # 2 SYN in a row --> meaning a SYN flood attack
             elif self.__packet_flag == 'S' and (self.__packet_ip_src in self.__in_handshake_process):
-                print("got here2")
 
                 ip = IP(dst=self.__packet_ip_src)
 
